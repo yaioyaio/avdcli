@@ -1,7 +1,7 @@
 {
   "name": "avdcli",
   "version": "0.0.1",
-  "description": "android emulator exec terminal command line",
+  "description": "android emulator avd list exec terminal command line",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -9,15 +9,24 @@
   "bin": {
     "avdcli": "./bin/avdcli.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yaioyaio/avdcli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yaioyaio/avdcli/issues"
+  },
+  "homepage": "https://github.com/yaioyaio/avdcli/blob/master/README.md",
   "preferGlobal": true,
   "keywords": [
     "android",
     "emulator",
     "avd",
     "command",
-    "line"
+    "line",
+    "avdcli"
   ],
-  "author": "yaio@naver.com",
+  "author": "yaioyaio@gmail.com",
   "license": "MIT",
   "dependencies": {
     "chalk": "3.0.0",
