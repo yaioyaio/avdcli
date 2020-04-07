@@ -6,8 +6,8 @@ const chalk = require("chalk")
 const advList = require("./lib/avd-list")
 const advSelector = require("./lib/avd-selector")
 
-const listRun = async () => {
-  const list = await advList.run_shell_command("emulator -list-avds")
+const runAvdList = async cmd => {
+  const list = await advList.run_shell_command(cmd)
   if (!list) {
     console.log(chalk.yellow("Android avd list empty!!!\n"))
     return
@@ -42,7 +42,9 @@ var Progress = require("progress"),
 commander
   .action(function() {
     bar.tick()
-    listRun()
+
+    let cmd = "emulator -list-avds"
+    runAvdList(cmd)
       .then(data => {
         if (!data) {
           console.log(chalk.red("Android avd list empty!!!\n"))
